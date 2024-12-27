@@ -8,10 +8,14 @@ app.get('/', (req, res) => {
 
 app.get('/info', (req, res) => {
   res.json({
-    name: 'Simple Web Server',
-    version: '1.0.0',
-    uptime: process.uptime()
+    message: 'Simple Web Server'
+    // version: '1.0.0',
+    // uptime: process.uptime()
   });
+});
+
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello from server!" });
 });
 
 app.listen(port, () => {
